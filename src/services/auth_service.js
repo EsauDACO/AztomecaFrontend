@@ -9,7 +9,7 @@ const service = axios.create({ withCredentials: true, baseURL });
 //Configuracion de conexiones al back de User
 const AUTH_SERVICE = {
   SIGNUP: data => service.post('/signup',data),
-  LOGIN: data => service.post('login',data),
+  LOGIN: data => service.post('/login',data),
   CURRENT_USER: () => service.get('/logged'),
   LOGOUT: () => service.get('/logout')
 };

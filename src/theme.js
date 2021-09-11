@@ -12,7 +12,7 @@ export default {
   ...theme,
   breakpoints,
   fonts: {
-    body: 'Montserrat, sans-serif',
+    body: '../public/fonts/Muchacho.ttf',
     heading: 'Montserrat, sans-serif',
     mono: 'Menlo, monospace'
   },
