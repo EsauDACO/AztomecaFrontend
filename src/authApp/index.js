@@ -1,12 +1,21 @@
+import { background } from '@chakra-ui/styled-system';
 import React from 'react'
-import {Switch, Route, Redirect} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom';
+import NavBar from '../components/NavBar/navBar';
+import routes from './routes';
 
 function AuthApp(){
+    const setRoutes = () => (
+        routes.map(({path,Component})=> <Route key={path} exact path={path} component={Component}/>)
+    )
     return(
-        <Switch>
-        <Route exact path="/app" component={()=> <h1>la ruta del app</h1>}/>
-        <Redirect to = '/app'/>
-        </Switch>
+        <>
+            <NavBar/>
+            <Switch>
+                {setRoutes()}
+                <Redirect to = "/app/home"/>
+            </Switch>
+        </>
     )
 }
 
