@@ -1,6 +1,5 @@
 import React from 'react';
 import {Switch, Redirect, Route} from 'react-router-dom';
-import {Flex, Text} from '@chakra-ui/react'
 import Login from './pages/Login';
 import SignUp from './pages/Signup';
 
